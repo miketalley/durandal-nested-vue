@@ -12,20 +12,26 @@
         { 
           route: '',
           title: 'Durandal - Welcome',
-          moduleId: 'views/welcome/index',
+          moduleId: 'app/views/welcome/index',
           nav: true },
         {
           route: 'flickr',
           title: 'Durandal - Flickr',
-          moduleId: 'views/flickr/index',
+          moduleId: 'app/views/flickr/index',
           nav: true
         },
         {
           route: ['vue*details'],
-          title: 'Vue',
-          moduleId: 'views/vue/index',
+          title: 'Vue - Index',
+          moduleId: 'app/views/vue/index',
           nav: true,
           hash: '#vue'
+        },
+        {
+          route: ['vue/about'],
+          title: 'Vue - About',
+          moduleId: 'app/views/vue/about',
+          nav: true
         }
       ]).buildNavigationModel();
       

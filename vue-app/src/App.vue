@@ -1,10 +1,10 @@
 <template>
   <div id="vue-app">
     <div id="vue-app-nav">
-      <router-link to="/index">Index</router-link> |
-      <router-link to="/about">About</router-link> | 
-      <a href="#">Dashboard</a> | 
-      <a href="#flickr">Contacts</a>
+      <router-link to="/index">Vue - Index</router-link> |
+      <router-link to="/about">Vue - About</router-link> | 
+      <a href="#">Durandal - Welcome</a> | 
+      <a href="#flickr">Durandal - Flickr</a>
     </div>
     <router-view/>
   </div>

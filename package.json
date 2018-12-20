@@ -4,10 +4,12 @@
   "description": "An example project showing how to properly nest a Vue app within a Durandal app.",
   "main": "server.js",
   "scripts": {
-    "start": "npm run npm-install && node server.js",
-    "npm-install": "npm run durandal-npm-install && npm run vue-npm-install",
-    "durandal-npm-install": "npm install --prefix ./durandal-app",
-    "vue-npm-install": "npm install --prefix ./vue-app"
+    "start": "npm run durandal-grunt && npm run vue-build && node server.js",
+    "npm-install": "npm install && npm run durandal-npm-install && npm run vue-npm-install",
+    "durandal-npm-install": "cd durandal-app && npm install",
+    "vue-npm-install": "cd vue-app && npm install",
+    "durandal-grunt": "cd durandal-app && grunt",
+    "vue-build": "cd durandal-app && npm run trigger-vue-build"
   },
   "repository": {
     "type": "git",
@@ -15,16 +17,11 @@
   },
   "author": "Mike Talley",
   "license": "ISC",
+  "devDependencies": {
+    "express": "^4.16.4"
+  },
   "bugs": {
     "url": "https://github.com/miketalley/durandal-nested-vue/issues"
   },
-  "homepage": "https://github.com/miketalley/durandal-nested-vue#readme",
-  "devDependencies": {
-    "express": "^4.16.4",
-    "grunt": "^1.0.3",
-    "grunt-contrib-clean": "^2.0.0",
-    "grunt-contrib-copy": "^1.0.0",
-    "load-grunt-config": "^1.0.1",
-    "time-grunt": "^2.0.0"
-  }
+  "homepage": "https://github.com/miketalley/durandal-nested-vue#readme"
 }

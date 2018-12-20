@@ -3,14 +3,14 @@ const loadGruntConfig = require('load-grunt-config');
 const timeGrunt = require('time-grunt');
 
 module.exports = function (grunt) {
-  const DURANDAL_APP_FOLDER = 'durandal-app';
+  const DURANDAL_APP_FOLDER = process.cwd();
   const DIST_FOLDER = 'dist';
   const BUILD_FOLDER = grunt.option('buildPath') || DIST_FOLDER;
-  const BUILD_PATH = path.join(__dirname, BUILD_FOLDER);
+  const BUILD_PATH = path.join(DURANDAL_APP_FOLDER, '..', BUILD_FOLDER);
 
   timeGrunt(grunt);
   loadGruntConfig(grunt, {
-    configPath: path.join(process.cwd(), 'grunt/config'),
+    configPath: path.join(DURANDAL_APP_FOLDER, 'grunt/config'),
     init: true,
     jitGrunt: {
       customTasksDir: 'grunt/tasks'
