@@ -13,27 +13,38 @@
           route: '',
           title: 'Durandal - Welcome',
           moduleId: 'app/views/welcome/index',
-          nav: true },
+          nav: true
+        },
         {
           route: 'flickr',
           title: 'Durandal - Flickr',
           moduleId: 'app/views/flickr/index',
           nav: true
         },
+        // {
+        //   route: ['vue*details'],
+        //   title: 'Vue',
+        //   moduleId: 'app/views/vue/index',
+        //   nav: true,
+        //   external: true
+        // },
         {
-          route: ['vue*details'],
-          title: 'Vue - Index',
+          route: ['vue/index'],
+          title: 'Vue',
           moduleId: 'app/views/vue/index',
           nav: true,
-          hash: '#vue'
+          external: true
         },
         {
           route: ['vue/about'],
-          title: 'Vue - About',
-          moduleId: 'app/views/vue/about',
-          nav: true
+          title: 'Vue',
+          moduleId: 'app/views/vue/index',
+          nav: true,
+          external: true
         }
       ]).buildNavigationModel();
+
+      window.router = router;
       
       return router.activate();
     }
