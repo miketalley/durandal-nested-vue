@@ -21,23 +21,16 @@
           moduleId: 'app/views/flickr/index',
           nav: true
         },
-        // {
-        //   route: ['vue*details'],
-        //   title: 'Vue',
-        //   moduleId: 'app/views/vue/index',
-        //   nav: true,
-        //   external: true
-        // },
         {
           route: ['vue/index'],
-          title: 'Vue',
+          title: 'Vue - Index',
           moduleId: 'app/views/vue/index',
           nav: true,
           external: true
         },
         {
           route: ['vue/about'],
-          title: 'Vue',
+          title: 'Vue - About',
           moduleId: 'app/views/vue/index',
           nav: true,
           external: true
