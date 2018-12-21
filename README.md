@@ -1,1 +1,1 @@
-# durandal-nested-vue
+# Durandal App with Nested Vue App
